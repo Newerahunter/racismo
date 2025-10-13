@@ -1,472 +1,190 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --color-primary: #1a1a1a;
-    --color-secondary: #ffffff;
-    --color-accent: #e63946;
-    --color-text: #2b2b2b;
-    --color-text-light: #6b6b6b;
-    --color-bg: #ffffff;
-    --color-bg-dark: #0a0a0a;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--color-text);
-    background-color: var(--color-bg);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-/* Header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md);
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.nav-brand {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-primary);
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: var(--spacing-md);
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: var(--color-accent);
-}
-
-.btn-contact {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: background-color 0.3s ease;
-}
-
-.btn-contact:hover {
-    background-color: var(--color-accent);
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/placeholder.svg?height=1080&width=1920');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: var(--color-secondary);
-    max-width: 900px;
-    padding: 0 var(--spacing-md);
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: var(--spacing-md);
-    letter-spacing: -0.02em;
-}
-
-.hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 300;
-    line-height: 1.6;
-    opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Stats Section */
-.stats {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-bg);
-}
-
-.section-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 400;
-    margin-bottom: var(--spacing-lg);
-    text-align: center;
-    letter-spacing: -0.01em;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-}
-
-.stat-card {
-    text-align: left;
-}
-
-.stat-number {
-    font-size: 5rem;
-    font-weight: 300;
-    color: var(--color-primary);
-    line-height: 1;
-    margin-bottom: var(--spacing-sm);
-}
-
-.stat-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
-}
-
-.stat-description {
-    font-size: 1rem;
-    color: var(--color-text-light);
-    line-height: 1.6;
-}
-
-/* Problem Section */
-.problem {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-bg);
-}
-
-.section-title-large {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300;
-    line-height: 1.3;
-    margin-bottom: var(--spacing-lg);
-    letter-spacing: -0.02em;
-    text-align: center;
-}
-
-.problem-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.problem-image {
-    width: 100%;
-    margin: var(--spacing-lg) 0;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.problem-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.problem-text {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: var(--color-text);
-    margin-bottom: var(--spacing-md);
-    text-align: center;
-}
-
-.btn-primary {
-    display: block;
-    margin: var(--spacing-md) auto 0;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-accent);
-}
-
-/* Cases Section */
-.cases {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-bg);
-}
-
-.cases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-}
-
-.case-card {
-    background-color: var(--color-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.case-card:hover {
-    transform: translateY(-8px);
-}
-
-.case-image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.case-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.case-card:hover .case-image img {
-    filter: grayscale(0%);
-}
-
-.case-content {
-    padding: var(--spacing-md);
-}
-
-.case-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
-}
-
-.case-description {
-    font-size: 1rem;
-    color: var(--color-text-light);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-sm);
-}
-
-.case-year {
-    display: inline-block;
-    font-size: 0.875rem;
-    color: var(--color-accent);
-    font-weight: 500;
-}
-
-/* Action Section */
-.action {
-    padding: var(--spacing-xl) 0;
-    background-color: #f8f8f8;
-}
-
-.action-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-}
-
-.action-item {
-    text-align: center;
-    padding: var(--spacing-md);
-}
-
-.action-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.action-item h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
-}
-
-.action-item p {
-    font-size: 1rem;
-    color: var(--color-text-light);
-    line-height: 1.6;
-}
-
-/* CTA Section */
-.cta {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-bg-dark);
-    color: var(--color-secondary);
-    text-align: center;
-}
-
-.cta-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300;
-    margin-bottom: var(--spacing-md);
-    letter-spacing: -0.02em;
-}
-
-.cta-text {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: var(--spacing-lg);
-    opacity: 0.9;
-}
-
-.btn-cta {
-    background-color: var(--color-accent);
-    color: var(--color-secondary);
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btn-cta:hover {
-    transform: scale(1.05);
-    background-color: #d62839;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--color-bg-dark);
-    color: var(--color-secondary);
-    padding: var(--spacing-lg) 0 var(--spacing-md);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-}
-
-.footer-title {
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-sm);
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: var(--spacing-xs);
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--color-secondary);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: var(--spacing-md);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.875rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .stats-grid,
-    .cases-grid,
-    .action-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stat-number {
-        font-size: 3.5rem;
-    }
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Accessibility */
-a:focus,
-button:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racismo no Futebol - Juntos Contra a Discriminação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     Header 
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">Futebol Sem Racismo</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#casos">Casos</a></li>
+                <li><a href="#acao">Ação</a></li>
+            </ul>
+            <button class="btn-contact">Denuncie</button>
+        </nav>
+    </header>
+
+     Hero Section 
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">O futebol é de todos.<br>O racismo não tem lugar aqui.</h1>
+            <p class="hero-subtitle">Juntos podemos construir um esporte mais justo, inclusivo e respeitoso para todas as pessoas.</p>
+        </div>
+    </section>
+
+     Stats Section 
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">A realidade em números</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <h3 class="stat-title">Caso a cada 3 dias</h3>
+                    <p class="stat-description">Em média, um caso de racismo é registrado no futebol brasileiro a cada três dias, segundo dados recentes.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <h3 class="stat-title">Aumento de 250%</h3>
+                    <p class="stat-description">Houve um aumento de 250% nas denúncias de racismo no futebol nos últimos cinco anos.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <h3 class="stat-title">Impunidade</h3>
+                    <p class="stat-description">Apenas 15% dos casos denunciados resultam em punições efetivas aos agressores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Problem Section 
+    <section class="problem" id="problema">
+        <div class="container">
+            <div class="problem-content">
+                <h2 class="section-title-large">Combater o racismo é responsabilidade de todos</h2>
+                <div class="problem-image">
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Jogadores unidos contra o racismo">
+                </div>
+                <p class="problem-text">
+                    O racismo no futebol não é apenas um problema dos atletas negros que sofrem os ataques. É um problema estrutural que afeta toda a sociedade e exige ação coletiva de clubes, federações, torcedores e instituições.
+                </p>
+                <button class="btn-primary">Saiba mais</button>
+            </div>
+        </div>
+    </section>
+
+     Cases Section 
+    <section class="cases" id="casos">
+        <div class="container">
+            <h2 class="section-title-large">Casos que marcaram o futebol</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Solidariedade no futebol">
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Vinicius Jr.</h3>
+                        <p class="case-description">O jogador brasileiro sofreu diversos ataques racistas na Espanha, gerando mobilização internacional.</p>
+                        <span class="case-year">2023</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Estádio contra racismo">
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Aranha</h3>
+                        <p class="case-description">Goleiro foi vítima de injúria racial em 2014, caso que resultou em mudanças na legislação esportiva.</p>
+                        <span class="case-year">2014</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Torcida contra racismo">
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Movimento Global</h3>
+                        <p class="case-description">Campanhas como "No Room for Racism" da UEFA mobilizam milhões contra a discriminação.</p>
+                        <span class="case-year">Atual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Action Section 
+    <section class="action" id="acao">
+        <div class="container">
+            <div class="action-content">
+                <h2 class="section-title-large">Como você pode ajudar</h2>
+                <div class="action-grid">
+                    <div class="action-item">
+                        <div class="action-icon">📢</div>
+                        <h3>Denuncie</h3>
+                        <p>Não seja conivente. Denuncie casos de racismo às autoridades competentes e aos canais oficiais dos clubes.</p>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">🤝</div>
+                        <h3>Apoie</h3>
+                        <p>Demonstre solidariedade às vítimas e apoie campanhas e organizações que combatem o racismo no esporte.</p>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">📚</div>
+                        <h3>Eduque</h3>
+                        <p>Informe-se sobre o tema e eduque outras pessoas sobre a importância do respeito e da igualdade racial.</p>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">⚖️</div>
+                        <h3>Cobre</h3>
+                        <p>Exija punições severas e efetivas para casos de racismo. Pressione por mudanças nas leis e regulamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     CTA Section 
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Faça parte da mudança</h2>
+                <p class="cta-text">O futebol tem o poder de unir pessoas. Vamos usar esse poder para construir um esporte livre de racismo e discriminação.</p>
+                <button class="btn-cta">Junte-se ao movimento</button>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 class="footer-title">Futebol Sem Racismo</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#problema">O Problema</a></li>
+                        <li><a href="#casos">Casos</a></li>
+                        <li><a href="#acao">Ação</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Observatório da Discriminação</a></li>
+                        <li><a href="#">Legislação</a></li>
+                        <li><a href="#">Campanhas</a></li>
+                        <li><a href="#">Relatórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">contato@futebolsemracismo.br</a></li>
+                        <li><a href="#">Canais de Denúncia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Futebol Sem Racismo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
