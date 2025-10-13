@@ -1,95 +1,190 @@
-/* Resetando algumas configurações padrão do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racismo no Futebol - Juntos Contra a Discriminação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     Header 
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">Futebol Sem Racismo</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#casos">Casos</a></li>
+                <li><a href="#acao">Ação</a></li>
+            </ul>
+            <button class="btn-contact">Denuncie</button>
+        </nav>
+    </header>
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+     Hero Section 
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">O futebol é de todos.<br>O racismo não tem lugar aqui.</h1>
+            <p class="hero-subtitle">Juntos podemos construir um esporte mais justo, inclusivo e respeitoso para todas as pessoas.</p>
+        </div>
+    </section>
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+     Stats Section 
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">A realidade em números</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <h3 class="stat-title">Caso a cada 3 dias</h3>
+                    <p class="stat-description">Em média, um caso de racismo é registrado no futebol brasileiro a cada três dias, segundo dados recentes.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <h3 class="stat-title">Aumento de 250%</h3>
+                    <p class="stat-description">Houve um aumento de 250% nas denúncias de racismo no futebol nos últimos cinco anos.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <h3 class="stat-title">Impunidade</h3>
+                    <p class="stat-description">Apenas 15% dos casos denunciados resultam em punições efetivas aos agressores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-header {
-    background-color: #2d3e50;
-    color: white;
-    padding: 20px 0;
-}
+     Problem Section 
+    <section class="problem" id="problema">
+        <div class="container">
+            <div class="problem-content">
+                <h2 class="section-title-large">Combater o racismo é responsabilidade de todos</h2>
+                <div class="problem-image">
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Jogadores unidos contra o racismo">
+                </div>
+                <p class="problem-text">
+                    O racismo no futebol não é apenas um problema dos atletas negros que sofrem os ataques. É um problema estrutural que afeta toda a sociedade e exige ação coletiva de clubes, federações, torcedores e instituições.
+                </p>
+                <button class="btn-primary">Saiba mais</button>
+            </div>
+        </div>
+    </section>
 
-header h1 {
-    text-align: center;
-}
+     Cases Section 
+    <section class="cases" id="casos">
+        <div class="container">
+            <h2 class="section-title-large">Casos que marcaram o futebol</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Solidariedade no futebol">
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Vinicius Jr.</h3>
+                        <p class="case-description">O jogador brasileiro sofreu diversos ataques racistas na Espanha, gerando mobilização internacional.</p>
+                        <span class="case-year">2023</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Estádio contra racismo">
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Aranha</h3>
+                        <p class="case-description">Goleiro foi vítima de injúria racial em 2014, caso que resultou em mudanças na legislação esportiva.</p>
+                        <span class="case-year">2014</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="/placeholder.svg?height=400&width=400" alt="Torcida contra racismo">
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Movimento Global</h3>
+                        <p class="case-description">Campanhas como "No Room for Racism" da UEFA mobilizam milhões contra a discriminação.</p>
+                        <span class="case-year">Atual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding-top: 10px;
-}
+     Action Section 
+    <section class="action" id="acao">
+        <div class="container">
+            <div class="action-content">
+                <h2 class="section-title-large">Como você pode ajudar</h2>
+                <div class="action-grid">
+                    <div class="action-item">
+                        <div class="action-icon">📢</div>
+                        <h3>Denuncie</h3>
+                        <p>Não seja conivente. Denuncie casos de racismo às autoridades competentes e aos canais oficiais dos clubes.</p>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">🤝</div>
+                        <h3>Apoie</h3>
+                        <p>Demonstre solidariedade às vítimas e apoie campanhas e organizações que combatem o racismo no esporte.</p>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">📚</div>
+                        <h3>Eduque</h3>
+                        <p>Informe-se sobre o tema e eduque outras pessoas sobre a importância do respeito e da igualdade racial.</p>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">⚖️</div>
+                        <h3>Cobre</h3>
+                        <p>Exija punições severas e efetivas para casos de racismo. Pressione por mudanças nas leis e regulamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav ul li {
-    margin: 0 20px;
-}
+     CTA Section 
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Faça parte da mudança</h2>
+                <p class="cta-text">O futebol tem o poder de unir pessoas. Vamos usar esse poder para construir um esporte livre de racismo e discriminação.</p>
+                <button class="btn-cta">Junte-se ao movimento</button>
+            </div>
+        </div>
+    </section>
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff6347;
-}
-
-section {
-    padding: 40px 0;
-}
-
-section h2 {
-    color: #2d3e50;
-    margin-bottom: 20px;
-}
-
-section p, section ul {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-footer {
-    background-color: #2d3e50;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Estilos Responsivos */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 class="footer-title">Futebol Sem Racismo</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#problema">O Problema</a></li>
+                        <li><a href="#casos">Casos</a></li>
+                        <li><a href="#acao">Ação</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Observatório da Discriminação</a></li>
+                        <li><a href="#">Legislação</a></li>
+                        <li><a href="#">Campanhas</a></li>
+                        <li><a href="#">Relatórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">contato@futebolsemracismo.br</a></li>
+                        <li><a href="#">Canais de Denúncia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Futebol Sem Racismo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
